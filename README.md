@@ -69,7 +69,16 @@ npm run preview
 
 The project currently uses a Supabase client initialized in `src/services/supabase.js`.
 
-> Note: For a production-ready setup, move the Supabase URL and anon key into environment variables instead of hardcoding them.
+Create a local environment file with your Supabase settings. For Vite, use these variable names:
+
+```env
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_ANON_KEY=your-anon-key
+```
+
+Store those values in a `.env.local` file or a similar local-only environment file. This repository already ignores `*.local`, so `.env.local` will not be committed.
+
+If you want to share a template, use `.env.example` with placeholder values instead of your real key.
 
 ## Deployment
 
